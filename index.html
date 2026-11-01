@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>تيربو بارتس | متجر قطع غيار السيارات الاحترافي 3D</title>
+  <!-- ربط ملف الأنماط الرئيسي -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ==================== شريط التنقل العلوي (Navbar) ==================== -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="#hero-section" class="brand-logo">
+        <div class="brand-icon">⚙️</div>
+        <div>
+          <span>تيربو بارتس</span>
+          <span class="brand-subtitle">TURBO AUTO PARTS 3D</span>
+        </div>
+      </a>
+
+      <!-- أقسام المتجر في شريط التنقل -->
+      <ul class="nav-links">
+        <li><button class="nav-btn active" data-category="الكل">الكل</button></li>
+        <li><button class="nav-btn" data-category="المحرك">المحرك</button></li>
+        <li><button class="nav-btn" data-category="الفرامل">الفرامل</button></li>
+        <li><button class="nav-btn" data-category="الكهرباء">الكهرباء</button></li>
+      </ul>
+
+      <!-- أزرار السلة والوضع الليلي/النهاري -->
+      <div class="nav-actions">
+        <button class="icon-btn" id="theme-toggle" title="تبديل الوضع الليلي / النهاري" aria-label="تبديل المظهر">
+          ☀️
+        </button>
+        <button class="icon-btn" id="open-cart-btn" title="سلة المشتريات" aria-label="سلة المشتريات">
+          🛒
+          <span class="cart-badge" id="cart-count">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== القسم الرئيسي (Hero 3D Section) ==================== -->
+  <section class="hero-section" id="hero-section">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-tag">🔥 الجيل الجديد من متاجر قطع الغيار الأصلية والرياضية</div>
+        <h1 class="hero-title">
+          قوة استثنائية وأداء لا يتوقف مع <span>قطع غيار أصلية 100%</span>
+        </h1>
+        <p class="hero-desc">
+          اكتشف تشكيلة واسعة من قطع المحرك، أنظمة الفرامل السيراميكية، والأنظمة الكهربائية المعتمدة بأعلى المعايير العالمية مع فحص توافق فوري وضمان شامل.
+        </p>
+        <div class="hero-cta-group">
+          <button class="btn-primary" id="hero-explore-btn">
+            <span>تصفح الكتالوج الآن</span>
+            <span>←</span>
+          </button>
+          <button class="btn-secondary" data-category="المحرك">
+            <span>أجزاء المحرك والتيربو</span>
+          </button>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-box">
+            <strong>+15,000</strong>
+            <span>قطعة غيار أصلية</span>
+          </div>
+          <div class="stat-box">
+            <strong>100%</strong>
+            <span>ضمان مطابقة OEM</span>
+          </div>
+          <div class="stat-box">
+            <strong>24 ساعة</strong>
+            <span>شحن سريع ومؤمّن</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- عرض ثلاثي الأبعاد تفاعلي في الواجهة الرئيسية -->
+      <div class="hero-3d-stage">
+        <div class="hero-3d-card" id="hero-3d-card">
+          <span class="hero-3d-badge">عرض الأسبوع الحصري • خصم 12%</span>
+          <div class="hero-3d-visual">
+            <svg viewBox="0 0 360 220" width="100%" height="200">
+              <defs>
+                <linearGradient id="heroRing" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#ff2a3c"/>
+                  <stop offset="100%" stop-color="#f97316"/>
+                </linearGradient>
+              </defs>
+              <circle cx="180" cy="110" r="92" fill="none" stroke="url(#heroRing)" stroke-width="5" stroke-dasharray="12 8"/>
+              <circle cx="180" cy="110" r="72" fill="#161c28" stroke="#94a3b8" stroke-width="6"/>
+              <circle cx="180" cy="110" r="38" fill="#0b0e14" stroke="#ff2a3c" stroke-width="6"/>
+              <g stroke="#cbd5e1" stroke-width="5" stroke-linecap="round">
+                <line x1="180" y1="45" x2="180" y2="175"/>
+                <line x1="115" y1="110" x2="245" y2="110"/>
+                <line x1="134" y1="64" x2="226" y2="156"/>
+                <line x1="226" y1="64" x2="134" y2="156"/>
+              </g>
+              <circle cx="180" cy="110" r="16" fill="url(#heroRing)"/>
+            </svg>
+          </div>
+          <h3 style="font-size: 1.2rem; font-weight: 900; margin-bottom: 0.35rem;">شاحن توربيني مزدوج الأداء Twin-Scroll</h3>
+          <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem;">
+            زيادة عزم الدوران حتى 35% مع سبائك تيتانيوم مقاومة للحرارة العالية.
+          </p>
+          <div class="hero-3d-Specs">
+            <div>
+              <span style="font-size: 0.75rem; color: var(--text-secondary); display: block;">السعر الحصري</span>
+              <strong style="font-size: 1.3rem; color: var(--accent-orange);">3,450 ر.س</strong>
+            </div>
+            <button class="btn-add-cart" id="hero-add-featured">+ أضف للسلة</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== شريط المزايا التنافسية ==================== -->
+  <section class="container">
+    <div class="features-strip">
+      <div class="feature-pill">
+        <div class="feature-icon">🛡️</div>
+        <div>
+          <h4>قطع أصلية مضمونة</h4>
+          <p>مطابقة لمعايير المصنع OEM</p>
+        </div>
+      </div>
+      <div class="feature-pill">
+        <div class="feature-icon">🚚</div>
+        <div>
+          <h4>شحن سريع لجميع المدن</h4>
+          <p>توصيل خلال 24 - 48 ساعة</p>
+        </div>
+      </div>
+      <div class="feature-pill">
+        <div class="feature-icon">🔧</div>
+        <div>
+          <h4>استشارة فنية مجانية</h4>
+          <p>فحص توافق القطعة برقم الشاسيه</p>
+        </div>
+      </div>
+      <div class="feature-pill">
+        <div class="feature-icon">↩️</div>
+        <div>
+          <h4>استبدال واسترجاع مرن</h4>
+          <p>ضمان استرجاع خلال 14 يوماً</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== قسم عرض المنتجات والفلترة ==================== -->
+  <main class="products-section" id="products-section">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">كتالوج قطع الغيار الاحترافية</h2>
+          <p class="section-subtitle">مرّر الماوس فوق الكروت لتجربة العرض ثلاثي الأبعاد (3D Tilt Effect)</p>
+        </div>
+      </div>
+
+      <!-- شريط الفلترة والبحث -->
+      <div class="toolbar-controls">
+        <div class="category-tabs">
+          <button class="filter-tab active" data-category="الكل">جميع الأقسام</button>
+          <button class="filter-tab" data-category="المحرك">⚙️ المحرك</button>
+          <button class="filter-tab" data-category="الفرامل">🛑 الفرامل</button>
+          <button class="filter-tab" data-category="الكهرباء">⚡ الكهرباء</button>
+        </div>
+
+        <div class="search-sort-group">
+          <input
+            type="search"
+            id="search-input"
+            class="search-input"
+            placeholder="ابحث باسم القطعة أو رقم OEM..."
+            aria-label="ابحث عن قطعة غيار"
+          />
+          <select id="sort-select" class="sort-select" aria-label="ترتيب المنتجات">
+            <option value="default">الترتيب الافتراضي</option>
+            <option value="price-asc">السعر: من الأقل للأعلى</option>
+            <option value="price-desc">السعر: من الأعلى للأقل</option>
+            <option value="rating">الأعلى تقييماً</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- شبكة المنتجات الديناميكية -->
+      <div class="products-grid" id="products-grid"></div>
+    </div>
+  </main>
+
+  <!-- ==================== سلة المشتريات الجانبية (Cart Drawer) ==================== -->
+  <div class="backdrop-overlay" id="backdrop-overlay"></div>
+
+  <aside class="cart-drawer" id="cart-drawer" aria-label="سلة المشتريات">
+    <div class="cart-header">
+      <h3>🛒 سلة المشتريات</h3>
+      <button class="icon-btn" id="close-cart-btn" style="width: 36px; height: 36px;">✕</button>
+    </div>
+
+    <div class="cart-items-list" id="cart-items-list"></div>
+
+    <div class="cart-footer">
+      <div class="summary-line">
+        <span>المجموع الفرعي:</span>
+        <span id="cart-subtotal">0 ر.س</span>
+      </div>
+      <div class="summary-line">
+        <span>الشحن السريع:</span>
+        <span style="color: #22c55e; font-weight: 700;">مجاني</span>
+      </div>
+      <div class="summary-total">
+        <span>الإجمالي الكلي:</span>
+        <span id="cart-total">0 ر.س</span>
+      </div>
+      <div class="cart-buttons-row">
+        <button class="btn-checkout" id="checkout-btn">إتمام الشراء الآن</button>
+        <button class="btn-clear" id="clear-cart-btn">إفراغ</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==================== نافذة المعاينة السريعة للمنتج ==================== -->
+  <div class="product-modal" id="product-modal">
+    <div class="modal-card" id="modal-content"></div>
+  </div>
+
+  <!-- حاوية الإشعارات الفورية -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- ==================== التذييل (Footer) ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="brand-logo" style="margin-bottom: 0.75rem;">
+            <div class="brand-icon">⚙️</div>
+            <div>
+              <span>تيربو بارتس</span>
+              <span class="brand-subtitle">TURBO AUTO PARTS</span>
+            </div>
+          </div>
+          <p style="color: var(--text-secondary); font-size: 0.9rem;">
+            المنصة العربية الرائدة لبيع قطع غيار السيارات الأصلية والرياضية بمعايير عالمية وضمان شامل.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>أقسام المتجر</h4>
+          <ul class="footer-links">
+            <li><button data-category="الكل">جميع قطع الغيار</button></li>
+            <li><button data-category="المحرك">قسم المحرك والتيربو</button></li>
+            <li><button data-category="الفرامل">قسم الفرامل الرياضية</button></li>
+            <li><button data-category="الكهرباء">قسم الكهرباء والبطاريات</button></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>خدمة العملاء</h4>
+          <ul class="footer-links">
+            <li><span>فحص التوافق برقم الهيكل (VIN)</span></li>
+            <li><span>سياسة الضمان والاستبدال</span></li>
+            <li><span>تتبع الشحنات الفوري</span></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>تواصل معنا</h4>
+          <ul class="footer-links">
+            <li><span>📞 الرقم الموحد: 9200-88410</span></li>
+            <li><span>✉️ support@turboparts.sa</span></li>
+            <li><span>🕒 يومياً من 8 صباحاً حتى 11 مساءً</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 تيربو بارتس لقطع غيار السيارات. جميع الحقوق محفوظة.</span>
+        <span>مصمم بتقنيات HTML5 & CSS3 3D & Vanilla JS ES6+</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ربط قاعدة بيانات المنتجات وملف الوظائف -->
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
